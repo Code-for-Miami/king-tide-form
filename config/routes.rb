@@ -11,5 +11,6 @@ Rails.application.routes.draw do
   end
 
   root 'floods#new'
+  get 'willitflood' => 'public/willitflood'
 
 end
