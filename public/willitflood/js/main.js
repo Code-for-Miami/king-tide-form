@@ -43,14 +43,14 @@ function initMap () {
 }
 
 function drawCalendar(map, place) {
+  if (!place.geometry) return;
+
   let       latitude = place.geometry.location.lat();
   let      longitude = place.geometry.location.lng();
   let       location = place.geometry.location;
   let closestStation = findClosestStation(lats, latitude, longitude);
   let stationDataUrl = "willitflood/tides/" + closestStation.id + "_annual.xml";
   let       distance = closestStation.distance.toPrecision(2);
-
-  if (!place.geometry) return;
 
   getElevation(location, function (elevation) {
     madComposer(elevation, distance)
@@ -60,7 +60,7 @@ function drawCalendar(map, place) {
 }
 
 /**
- * This uses the ‘haversine’ formula to calculate the great-circle distance
+ * This uses the ‘Haversine’ formula to calculate the great-circle distance
  * between two points – that is, the shortest distance over the
  * earth’s surface – giving an ‘as-the-crow-flies’ distance between
  * the points (ignoring any hills they fly over, of course!).
