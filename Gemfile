@@ -47,7 +47,6 @@ gem 'bootstrap-sass', '3.3.5'
 gem 'bootstrap-sass-extras'
 gem 'activeadmin', github: 'activeadmin'
 gem 'devise'
-gem 'binding_of_caller'
 gem 'tzinfo-data'
 gem 'validates_formatting_of'
 gem "paperclip", "~> 5.0.0"
@@ -66,4 +65,6 @@ end
 
 group :development do
   gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'debug-extras' # Is a temporary fix for slow REPL https://github.com/charliesome/better_errors/issues/341
 end

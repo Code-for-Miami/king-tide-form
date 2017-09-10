@@ -59,6 +59,7 @@ GEM
     arel (6.0.4)
     autoprefixer-rails (7.1.1)
       execjs
+    awesome_print (1.8.0)
     aws-sdk (2.9.31)
       aws-sdk-resources (= 2.9.31)
     aws-sdk-core (2.9.31)
@@ -95,6 +96,10 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
+    debug-extras (0.3.4)
+      actionview (> 4.0, < 6)
+      activesupport (> 4.0, < 6)
+      awesome_print (>= 1.6, < 1.9)
     debug_inspector (0.0.3)
     devise (4.3.0)
       bcrypt (~> 3.0)
@@ -263,6 +268,7 @@ DEPENDENCIES
   bootstrap-sass-extras
   bundler
   coffee-rails (~> 4.0.0)
+  debug-extras
   devise
   figaro
   google-analytics-rails
@@ -286,4 +292,4 @@ RUBY VERSION
    ruby 2.2.4p230
 
 BUNDLED WITH
-   1.14.6
+   1.15.4

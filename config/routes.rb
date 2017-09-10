@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
+  root 'floods#new'
+
   devise_for :admin_users, ActiveAdmin::Devise.config
+
   ActiveAdmin.routes(self)
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
 
   resources :floods, only: [:new, :create, :index] do
     collection do
@@ -10,7 +11,8 @@ Rails.application.routes.draw do
     end
   end
 
-  root 'floods#new'
-  get 'willitflood' => 'public/willitflood'
+  get "/pages/*id" => 'pages#show', as: :page, format: false
 
+  get 'willitflood' => 'pages#show', id: 'willitflood'
+  
 end

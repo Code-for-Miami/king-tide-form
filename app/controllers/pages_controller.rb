@@ -1,17 +1,15 @@
 class PagesController < ApplicationController
-      include HighVoltage::StaticPage
+  include HighVoltage::StaticPage
+  layout :layout_for_page
 
-      before_filter :authenticate
-      layout :layout_for_page
+  private
 
-      private
+  def layout_for_page
+    id = params[:id]
 
-      def layout_for_page
-        case params[:id]
-        when 'home'
-          'home'
-        else
-          'application'
-        end
-      end
+    return :home if id === 'home'
+    return false if id === 'willitflood'
+
+    :application
+  end
 end
