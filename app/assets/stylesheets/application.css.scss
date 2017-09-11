@@ -11,7 +11,9 @@
 * file per style scope.
 *
 *= require_tree .
+* Exclude these specific files from asset pipeline
 *= stub active_admin
+*= stub willitflood
 
 *= require_self
 *= require bootstrap-cerulean.min
@@ -21,11 +23,11 @@
 @import "bootstrap_configuration";
 @import "bootstrap-sprockets";
 @import "_variables";
+@import "floods";
 
 //->Prelang (ui_framework:twitter_bootstrap)
 
 $brand-primary: #2FA4E7;
-
 
 // Give everything in 'yield' margin to separate it.
 .yield {
