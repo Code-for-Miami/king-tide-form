@@ -22,11 +22,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc   # bundle exec rake doc:rails generates the
 
 ## Libraries
 
-gem 'bootstrap', '~> 4.0.0.beta'
+# gem 'bootstrap', '~> 4.0.0.beta'
 
-# gem 'bootstrap-sass', '3.3.5'
-# gem 'bootstrap-sass-extras'
-# gem 'bootstrap-popover-rails'
+gem 'bootstrap-sass', '3.3.5'
+gem 'bootstrap-sass-extras'
+gem 'bootstrap-popover-rails'
 
 gem 'google-analytics-rails'
 gem 'activeadmin', '~> 1.1.0'

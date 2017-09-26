@@ -68,10 +68,6 @@ GEM
       rack (>= 0.9.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
-    bootstrap (4.0.0.beta)
-      autoprefixer-rails (>= 6.0.3)
-      popper_js (~> 1.11.1)
-      sass (>= 3.4.19)
     bootstrap-popover-rails (0.1.0)
     bootstrap-sass (3.3.5)
       autoprefixer-rails (>= 5.0.0.1)
@@ -169,7 +165,6 @@ GEM
     pg (0.21.0)
     polyamorous (1.3.1)
       activerecord (>= 3.0)
-    popper_js (1.11.1)
     puma (3.10.0)
     rack (1.6.8)
     rack-test (0.6.3)
@@ -269,7 +264,6 @@ DEPENDENCIES
   aws-sdk (~> 2.3)
   better_errors
   binding_of_caller
-  bootstrap (~> 4.0.0.beta)
   bootstrap-popover-rails
   bootstrap-sass (= 3.3.5)
   bootstrap-sass-extras
@@ -300,4 +294,4 @@ RUBY VERSION
    ruby 2.2.4p230
 
 BUNDLED WITH
-   1.15.4
+   1.16.0.pre.2
