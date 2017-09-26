@@ -10,7 +10,9 @@
   <%= stylesheet_link_tag 'willitflood', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css', media: 'all'%>
 
-  <script defer type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoip0ve1aHbxpGyC7cQnV6qq7zLNGjAfU&libraries=places&callback=initMap"></script>
+  <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ENV['google_maps_key']}=places&callback=initMap",
+                             'defer'=>true %>
+
   <script type="text/javascript" src="willitflood/js/calendar.js"></script>
   <script type="text/javascript" src="willitflood/js/main.js"></script>
 </head>

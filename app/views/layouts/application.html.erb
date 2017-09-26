@@ -3,7 +3,7 @@
 <head>
   <title><%= yield :title %> | King Tide</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <script src="//maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAuvkHGHbV_XQzWFsbIorkGczbLQ5lx8KQ"></script>
+  <%= javascript_include_tag "//maps.googleapis.com/maps/api/js?libraries=places&key=#{ENV['google_maps_key']}"%>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <%= analytics_init if Rails.env.production? or Rails.env.development? %>
