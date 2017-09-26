@@ -7,8 +7,6 @@ _Produced for Miami Open Data Day 2017_
 
 Here is what the current site looks like: http://citizeneyes.org/flood/
 
-
-
 Research on JotForm's mobile responsiveness and mapping/geolocation APIs to improve on flood submission form - and/or create new form and database
 
 [Github Issue](https://github.com/Code-for-Miami/OpenDataDay2017/issues/2)
@@ -27,5 +25,25 @@ Research on JotForm's mobile responsiveness and mapping/geolocation APIs to impr
 - [Yami Medina](https://www.github.com/yamilethmedina)
 - [Julie Kramer](https://www.github.com/thejuliekramer)
 - [Diego Salazar](https://www.github.com/diegosalazar)
+
+## Develop
+
+#### OSX
+
+1. Clone Repo
+2. Install [Brew](https://brew.sh/)
+3. Install [RVM](https://rvm.io/)
+4. Use RVM to install ruby `2.2.4`
+  `rvm install 2.2.4`
+5. Navigate to cloned repos folder
+6. Install Bundler
+  `gem install bundler`
+7. Run bundler
+  `bundle install`
+8. Install Figaro
+  `bundle exec figaro install`
+9. Add Keys see `config/example.application.yml`
+10. Start server `rails s`
+
 
 ![Open Data Day Logo](cfm-odd-logo.png)
