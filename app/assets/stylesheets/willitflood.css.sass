@@ -1,0 +1,205 @@
+@charset "UTF-8"
+/* CSS Document */
+html,
+body 
+  font-family: Helvetica, Arial, sans-serif
+  font-size: 16px
+  height: 100%
+  margin: 0
+  padding: 0
+
+header 
+  margin: auto
+
+h1 
+  color: #0020ff
+
+
+h3 
+  font-size: 1.25vw
+  font-weight: bold
+  margin: 0
+  padding: 5%
+  text-align: center
+
+
+main 
+  height: 100%
+  margin: 0
+
+
+.container 
+  position: relative
+  margin-left: auto
+  margin-right: auto
+  padding-right: 15px
+  padding-left: 15px
+
+
+@media (min-width: 576px) 
+.container 
+  width: 540px
+  max-width: 100%
+
+
+
+@media (min-width: 768px) 
+.container 
+  width: 720px
+  max-width: 100%
+
+
+
+@media (min-width: 992px) 
+.container 
+  width: 960px
+  max-width: 100%
+
+
+
+@media (min-width: 1200px) 
+.container 
+  width: 1140px
+  max-width: 100%
+
+
+
+#station 
+  font-weight: bold
+  text-align: left
+
+
+#jan, #feb, #mar,
+#apr, #may, #jun,
+#jul, #aug, #sep,
+#oct, #nov, #dec
+  background-color: #cbc7c7
+  border: thin black solid
+  width: 30%
+  overflow: hidden
+  padding: .5%
+  float: left
+  margin-right: 1%
+  margin-top: 1%
+  display: none
+
+
+#madlib 
+  display: none
+  padding: 1%
+
+
+.tide1 
+  background-color: rgba(0, 215, 255, 0.67)
+  padding: .5%
+  width: 12%
+  float: left
+  border: thin black solid
+
+
+.tide2 
+  background-color: rgba(0, 94, 255, 0.48)
+  padding: .5%
+  width: 12%
+  float: left
+  border: thin black solid
+
+
+.plain 
+  background-color: white
+  padding: .5%
+  width: 12%
+  float: left
+  border: thin black solid
+
+
+.highest 
+  background-color: darkred
+  padding: .5%
+  width: 12%
+  float: left
+  border: thin black solid
+
+
+footer 
+  clear: both
+
+
+footer img 
+  padding: 1%
+
+
+
+#chooser 
+  width: 25%
+  font-size: 2vw
+  margin-left: 1%
+  margin-bottom: 1%
+  background-color: rgba(2, 255, 242, 0.67)
+  padding: 1%
+  position: absolute
+  left: 50%
+  top: 2%
+
+
+.pushy 
+  float: right
+
+
+#testy 
+  display: none
+
+
+/*GOOGLE MAP STYLES*/
+#map 
+  height: 35%
+  width: 100%
+
+.controls 
+  border-radius: 2px
+  border: 1px solid black
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3)
+  box-sizing: border-box
+  font-family: Helvetica, Arial, sans-serif
+  font-size: 1.6em
+  line-height: 2em
+  font-weight: 300
+  margin: 10px
+  padding: 0 0 0 0.5em
+  text-overflow: ellipsis
+  width: 66%
+
+.controls:focus 
+  border-color: #4d90fe
+
+.title 
+  font-weight: bold
+
+#infowindow-content 
+  display: none
+
+#map #infowindow-content 
+  display: inline
+
+a:link 
+  text-decoration: none
+
+#kingchooser 
+  display: none
+
+.tooltip 
+  position: absolute
+  transition: opacity 1s
+  opacity: 1
+  border: thin solid #333
+  background-color: #161616
+  border-radius: 5px
+  padding: 1%
+  color: #fff
+  font-size: 2vw Arial
+
+
+.hidden 
+  transition: opacity 1s
+  opacity: 0
+
