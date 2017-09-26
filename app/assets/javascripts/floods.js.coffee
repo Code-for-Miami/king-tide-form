@@ -2,7 +2,7 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-$ ->
+$(document).ready ->
   map = $ "#gmap"
   location_field = $ "#flood_location"
   address = $ "#flood_address"
@@ -13,8 +13,7 @@ $ ->
   fileFieldTemplate = $ '.duplicateable-file-field'
 
   # Helper functions
-
-  postInitMap = (map)->
+  postInitMap = (map) ->
     $('#mapwrap').height('400px').width 'auto'
 
   setLatLng = (lat, lng) ->
