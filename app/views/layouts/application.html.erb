@@ -3,8 +3,10 @@
 <head>
   <title><%= yield :title %> | King Tide</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag "//maps.googleapis.com/maps/api/js?libraries=places&key=#{ENV['google_maps_key']}"%>
+  <%= javascript_include_tag "//maps.googleapis.com/maps/api/js?libraries=places&key=#{ENV['google_maps_key']}", 'defer' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script src="https://code.jquery.com/jquery-migrate-3.0.0.js"></script>
+
 
   <%= csrf_meta_tags %>
   <%= analytics_init if Rails.env.production? or Rails.env.development? %>
