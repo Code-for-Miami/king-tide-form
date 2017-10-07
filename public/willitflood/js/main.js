@@ -1,5 +1,5 @@
 function initMap () {
-  window.king = 2.6;
+  window.king = 2.5;
   loadStations();
   let     selector = document.querySelector("#kingme");
   let        input = document.getElementById("pac-input");
@@ -210,7 +210,8 @@ function loadXMLDoc (mystation) {
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function() {
     if (this.readyState === 4 && this.status === 200) {
-      loadArray(this);
+      var months = loadArray(this);
+      renderCalendar(months);
     }
   };
   xmlhttp.open("GET", mystation, true);
