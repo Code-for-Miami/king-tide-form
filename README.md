@@ -4,7 +4,7 @@ This branch is dedicated to fixing the layout as per issue: https://github.com/C
 
 Right now, the calendar generation has been refactored so that each month complies to the following structure:
 
-```
+```html
 <div class="calendar-month">
     <h2 class="month-name">January</h2>
     <div class="month-header">
