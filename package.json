@@ -1,0 +1,22 @@
+{
+  "name": "king-tide",
+  "version": "1.0.0",
+  "description": "_Produced for Miami Open Data Day 2017_",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Code-for-Miami/king-tide.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Code-for-Miami/king-tide/issues"
+  },
+  "homepage": "https://github.com/Code-for-Miami/king-tide#readme"
+}

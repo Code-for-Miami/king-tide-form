@@ -178,13 +178,13 @@ function renderMonth(monthData) {
         monthData.name +
         "</h2>" +
         "<div class='month-header'>" +
-        "<span class='week-day'>Mon</span>" +
-        "<span class='week-day'>Tue</span>" +
-        "<span class='week-day'>Wed</span>" +
-        "<span class='week-day'>Thu</span>" +
-        "<span class='week-day'>Fri</span>" +
-        "<span class='week-day'>Sat</span>" +
-        "<span class='week-day'>Sun</span>" +
+        "<span class='week-day month-day'>Mon</span>" +
+        "<span class='week-day month-day'>Tue</span>" +
+        "<span class='week-day month-day'>Wed</span>" +
+        "<span class='week-day month-day'>Thu</span>" +
+        "<span class='week-day month-day'>Fri</span>" +
+        "<span class='week-day month-day'>Sat</span>" +
+        "<span class='week-day month-day'>Sun</span>" +
         "</div>";
     
     monthData.weeks.forEach(function(week){
