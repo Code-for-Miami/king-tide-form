@@ -12,11 +12,14 @@
 
   <%= javascript_include_tag "//maps.googleapis.com/maps/api/js?libraries=places&key=#{ENV['google_maps_key']}&callback=initMap",
                              'defer'=>true %>
+  <%= javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js",
+                             'defer'=>true %>
 
   <script type="text/javascript" src="willitflood/js/calendar.js"></script>
   <script type="text/javascript" src="willitflood/js/main.js"></script>
 </head>
 <body>
+<div id="floating-label" class="floating-label hidden"></div>
 <main>
   <header>
     <div class="container">
@@ -51,18 +54,9 @@
   <div class="container">
     <h2 id="station"></h2>
     <p id="madlib"></p>
-    <div id="jan"></div>
-    <div id="feb"></div>
-    <div id="mar"></div>
-    <div id="apr"></div>
-    <div id="may"></div>
-    <div id="jun"></div>
-    <div id="jul"></div>
-    <div id="aug"></div>
-    <div id="sep"></div>
-    <div id="oct"></div>
-    <div id="nov"></div>
-    <div id="dec"></div>
+    <div id="calendar">
+      
+    </div>
   </div>
   <footer>
     <div class="container">
