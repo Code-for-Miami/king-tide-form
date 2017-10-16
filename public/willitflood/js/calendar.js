@@ -26,6 +26,7 @@ function loadArray(xml) {
     var today = new Date();
     var todayMonthNum = today.getMonth();
     var xmlDocument = xml.responseXML;
+    // var leyendText = "Risk Level <br> None Low Med  High";
     var stationname = xmlDocument.querySelector("stationname").textContent;
     var tides = xmlDocument.querySelectorAll("item");
     var months = [[], [], [], [], [], [], [], [], [], [], [], []];
@@ -70,6 +71,7 @@ function loadArray(xml) {
             }
         }
     }
+    document.getElementById("leyend").style.display = "block";
     document.getElementById("station").innerHTML = stationname;
     return calendarize(months);
 }

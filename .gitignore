@@ -28,3 +28,5 @@ sftp-config.json
 /app/assets/.DS_Store
 /public/.DS_Store
 .idea/*
+
+node_modules/
