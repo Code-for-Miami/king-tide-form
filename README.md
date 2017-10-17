@@ -31,15 +31,16 @@ Research on JotForm's mobile responsiveness and mapping/geolocation APIs to impr
 3. Install [RVM](https://rvm.io/)
 4. Use RVM to install ruby `2.2.4`
   `rvm install 2.2.4`
-5. Navigate to cloned repos folder
-6. Install Bundler
+5. Install [Postgress App](https://postgresapp.com/)
+6. Navigate to cloned repos folder
+7. Install Bundler
   `gem install bundler`
-7. Run bundler
+8. Run bundler
   `bundle install`
-8. Install Figaro
+9. Install Figaro
   `bundle exec figaro install`
-9. Add Keys see `config/example.application.yml`
-10. Start server `rails s`
+10. Add Keys see `config/example.application.yml`
+11. Start server `rails s`
 
 
 ![Open Data Day Logo](cfm-odd-logo.png)
