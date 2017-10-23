@@ -26,7 +26,6 @@ function loadArray(xml) {
     var today = new Date();
     var todayMonthNum = today.getMonth();
     var xmlDocument = xml.responseXML;
-    // var leyendText = "Risk Level <br> None Low Med  High";
     var stationname = xmlDocument.querySelector("stationname").textContent;
     var tides = xmlDocument.querySelectorAll("item");
     var months = [[], [], [], [], [], [], [], [], [], [], [], []];
@@ -242,4 +241,13 @@ function showLabel(event) {
 function hideLabel(event) {
   var label = document.getElementById("floating-label");
   label.classList.add("hidden");
+}
+
+function linkToForm(event) {
+    var monthDayButton = document.getElementById("month-day");
+    var day = event.target;
+    var mousex = event.pageX + 20; //Get X coordinates
+    var mousey = event.pageY + 10; //Get Y coordinates
+           
+    monthDayButton.onclick.location.href='../floods/index';
 }

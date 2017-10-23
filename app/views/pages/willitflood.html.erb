@@ -23,7 +23,7 @@
 <main>
   <header>
     <div class="container">
-      <h1>Will it Flood?</h1>
+      <h1 class="full-width">Will it Flood?</h1>
       <h4>
         Enter your address in the map. A calendar of high tides for the nearest NOAA tide monitoring station will appear. Dates
         in blue are at highest risk. Click or roll over to see time & depth.
@@ -46,18 +46,19 @@
           <option name="4.8" value="4.8"> 4.8 feet </option>
           <option name="5.0" value="5.0"> 5.0 feet </option>
         </select>
-      </form>
+      </form> </br>
     </div>
   </header>
   <input id="pac-input" class="controls" placeholder="Enter your address">
   <div id="map"></div>
   <div class="container">
-      <div hidden id="leyend" class="leyendText">
-        <p> Risk Level</p>
-        <p><span class="square"></span>None</p>
-        <p><span class="square low"></span>Low</p>
-        <p><span class="square med"></span>Med</p>
-        <p><span class="square high"></span>High</p>
+      <div>
+        <p hidden id="leyend" class="leyendText" > Risk Level  &nbsp &nbsp
+        <span class="square"></span> Tides < 3.0 ft &nbsp &nbsp  
+        <span class="square low"></span> Tides > 3.0 ft &nbsp &nbsp 
+        <span class="square med"></span> Tides < 8.0 ft &nbsp &nbsp
+        <span class="square high"></span> Tides >= 8.0 ft  
+        </p>
       </div>
     <h2 id="station"></h2>
     <p id="madlib"></p>
