@@ -12,15 +12,18 @@
 
   <%= javascript_include_tag "//maps.googleapis.com/maps/api/js?libraries=places&key=#{ENV['google_maps_key']}&callback=initMap",
                              'defer'=>true %>
+  <%= javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js",
+                             'defer'=>true %>
 
   <script type="text/javascript" src="willitflood/js/calendar.js"></script>
   <script type="text/javascript" src="willitflood/js/main.js"></script>
 </head>
 <body>
+<div id="floating-label" class="floating-label hidden"></div>
 <main>
   <header>
     <div class="container">
-      <h1>Will it Flood?</h1>
+      <h1 class="full-width">Will it Flood?</h1>
       <h4>
         Enter your address in the map. A calendar of high tides for the nearest NOAA tide monitoring station will appear. Dates
         in blue are at highest risk. Click or roll over to see time & depth.
@@ -43,26 +46,25 @@
           <option name="4.8" value="4.8"> 4.8 feet </option>
           <option name="5.0" value="5.0"> 5.0 feet </option>
         </select>
-      </form>
+      </form> </br>
     </div>
   </header>
   <input id="pac-input" class="controls" placeholder="Enter your address">
   <div id="map"></div>
   <div class="container">
+      <div>
+        <p hidden id="leyend" class="leyendText" > Risk Level  &nbsp &nbsp
+        <span class="square"></span> Tides < 3.0 ft &nbsp &nbsp  
+        <span class="square low"></span> Tides > 3.0 ft &nbsp &nbsp 
+        <span class="square med"></span> Tides < 8.0 ft &nbsp &nbsp
+        <span class="square high"></span> Tides >= 8.0 ft  
+        </p>
+      </div>
     <h2 id="station"></h2>
     <p id="madlib"></p>
-    <div id="jan"></div>
-    <div id="feb"></div>
-    <div id="mar"></div>
-    <div id="apr"></div>
-    <div id="may"></div>
-    <div id="jun"></div>
-    <div id="jul"></div>
-    <div id="aug"></div>
-    <div id="sep"></div>
-    <div id="oct"></div>
-    <div id="nov"></div>
-    <div id="dec"></div>
+    <div id="calendar">
+      
+    </div>
   </div>
   <footer>
     <div class="container">
