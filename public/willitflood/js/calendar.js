@@ -196,12 +196,14 @@ function renderMonth(monthData) {
           dayElement.classList.toggle("month-day");
           dayElement.textContent = day.date;
           if(day.inMonth) {
-            dayElement.dataset.label = day.tideData.label;
-            if (day.tideData.highestInMonth) {
-              dayElement.classList.toggle("highest-in-month");
-            }
-            switch(day.tideData.floodLevel) {
-              case 0:
+              dayElement.onmouseenter = showLabel;
+              dayElement.onmouseleave = hideLabel;
+              dayElement.dataset.label = day.tideData.label;
+              if (day.tideData.highestInMonth) {
+                  dayElement.classList.toggle("highest-in-month");
+                }
+                switch(day.tideData.floodLevel) {
+                    case 0:
                 dayElement.classList.toggle("no-tides");
                 break;
               case 1:
@@ -216,8 +218,6 @@ function renderMonth(monthData) {
           } else {
             dayElement.classList.toggle("non-month");
           }
-          dayElement.onmouseenter = showLabel;
-          dayElement.onmouseleave = hideLabel;
           weekElement.appendChild(dayElement);
         });
         monthElement.appendChild(weekElement);
