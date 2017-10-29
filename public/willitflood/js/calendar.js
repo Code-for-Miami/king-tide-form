@@ -242,12 +242,3 @@ function hideLabel(event) {
   var label = document.getElementById("floating-label");
   label.classList.add("hidden");
 }
-
-function linkToForm(event) {
-    var monthDayButton = document.getElementById("month-day");
-    var day = event.target;
-    var mousex = event.pageX + 20; //Get X coordinates
-    var mousey = event.pageY + 10; //Get Y coordinates
-           
-    monthDayButton.onclick.location.href='../floods/index';
-}
