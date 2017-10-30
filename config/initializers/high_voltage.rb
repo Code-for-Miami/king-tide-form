@@ -9,9 +9,9 @@ HighVoltage.configure do |config|
   # config.content_path = 'site/'
 
   # Disable Routes
-  config.routes = false
+  #config.routes = false
 
   # Default Layout
-  config.layout = false
+  #config.layout = false
 
 end

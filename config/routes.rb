@@ -12,8 +12,9 @@ Rails.application.routes.draw do
   end
 
   # Wild Card Catch-all for High Voltage
-  get "/pages/*id" => 'pages#show', as: :page, format: false
+  #get "/pages/*id" => 'pages#show', as: :page, format: false
 
   get 'willitflood' => 'pages#show', id: 'willitflood'
+  #get 'instructions' => 'pages#show', id: 'instructions'
 
 end
