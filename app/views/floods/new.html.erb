@@ -74,8 +74,8 @@
             <div class="form-group">
               <div class="form-inline">
                 <div class="form-group" data-content="You can use a refractometer to measure salinity in flood waters. <a href='/pages/instructions' title='Instructions'>More info</a>" data-toggle="popover" data-placement="right" data-html="true" title="Salinity">
-                  <%= f.label :salinity, nil, class: 'flood-labels' %>
-                  <%= f.number_field :salinity, placeholder: 'ppt (0/00) (parts per trillion)', class: "salinity-input form-control" %>
+                  <%# f.label :salinity, nil, class: 'flood-labels' %>
+                  <%# f.number_field :salinity, placeholder: 'ppt (0/00) (parts per trillion)', class: "salinity-input form-control" %>
                 </div>
               </div>
             </div>
@@ -85,13 +85,13 @@
             <div class="form-group">
               <div class="form-inline">
                 <div class="form-group" data-content="The local sea level can increase for a variety of reasons, for example, if the water is unusually warm, it increases the water depth through thermal expansion. Sea level can also rise during persistent low pressure in the atmosphere, which draws the water’s surface upward. (Source: <a href='https://weather.com/news/news/miami-beach-flooding-high-king-tide'>https://weather.com/news/news/miami-beach-flooding-high-king-tide</a>)" data-toggle="popover" data-placement="bottom" data-html="true" title="Water Depth">
-                  <%= f.label :water_depth, nil, class: 'flood-labels' %>
-                  <%= f.number_field :water_depth, class: "form-control" %>
+                  <%# f.label :water_depth, nil, class: 'flood-labels' %>
+                  <%# f.number_field :water_depth, class: "form-control" %>
                 </div>
 
                 <div class="form-group">
-                  <%= f.label :water_depth_units, "Units", class: 'flood-labels' %>
-                  <%= f.select :water_depth_units, options_for_select(["inches", "centimeters", "1/8 inches"]), {}, class: "form-control" %>
+                  <%# f.label :water_depth_units, "Units", class: 'flood-labels' %>
+                  <%# f.select :water_depth_units, options_for_select(["inches", "centimeters", "1/8 inches"]), {}, class: "form-control" %>
                 </div>
               </div>
             </div>
