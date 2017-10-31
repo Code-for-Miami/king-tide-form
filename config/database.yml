@@ -80,6 +80,7 @@ test:
 #
 production:
   <<: *default
-  database: sea_level_rise_data_collection_production
-  username: sea_level_rise_data_collection
-  password: ENV['SEA_LEVEL_RISE_DATA_COLLECTION_DATABASE_PASSWORD']
+  url: <%= ENV['DATABASE_URL'] %>
+  #database: sea_level_rise_data_collection_production
+  #username: sea_level_rise_data_collection
+  #password: ENV['SEA_LEVEL_RISE_DATA_COLLECTION_DATABASE_PASSWORD']
