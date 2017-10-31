@@ -1,6 +1,8 @@
 class Flood < ActiveRecord::Base
   require 'csv'
   has_many :attachments
+  has_one :salinity
+  has_one :depth
   accepts_nested_attributes_for :attachments
 
   validates_formatting_of :email, using: :email

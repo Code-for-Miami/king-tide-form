@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  level: 1.5
+  image: 
+  flood_id: 
+
+two:
+  level: 1.5
+  image: 
+  flood_id: 

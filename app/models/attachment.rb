@@ -15,5 +15,4 @@ class Attachment < ActiveRecord::Base
   belongs_to :flood
   has_attached_file :upload
   validates_attachment_content_type :upload, :content_type =>['image/jpeg', 'image/png', 'image/gif', 'image/jpg', 'video/mp4', 'video/avi', 'video/mov']
-
 end
