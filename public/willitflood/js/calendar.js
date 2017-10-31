@@ -165,6 +165,7 @@ function parseTideData(tideData, highestTide) {
 
 function renderCalendar(calendarData) {
     var calendar = document.querySelector("#calendar");
+    calendar.innerHTML = "";
     calendarData.forEach(function(calendarMonth) {
         calendar.appendChild(renderMonth(calendarMonth));
     });
