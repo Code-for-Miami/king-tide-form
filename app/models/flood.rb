@@ -3,7 +3,7 @@ class Flood < ActiveRecord::Base
   has_many :attachments
   has_one :salinity
   has_one :depth
-  accepts_nested_attributes_for :attachments
+  accepts_nested_attributes_for :attachments, :salinity, :depth
 
   validates_formatting_of :email, using: :email
   store :location, coder: JSON
