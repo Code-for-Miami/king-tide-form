@@ -46,20 +46,23 @@ class FloodsController < ApplicationController
       :water_depth_units,
       :latitude,
       :longitude,
-      :document,
       :description,
       attachments_attributes: [
         :upload,
         :attachment
       ],
       salinity_attributes: [
+        :id,
         :level,
-        :image
+        :image,
+        :destroy
       ],
       depth_attributes: [
+        :id,
         :level,
         :unit,
-        :image
+        :image,
+        :destroy
       ]
     )
   end

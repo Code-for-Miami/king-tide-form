@@ -96,7 +96,7 @@
                 </div>
                 <div class="form-group">
                   <%= d.label :unit, "Depth Units", class: 'flood-labels' %>
-                  <%= d.select :unit, options_for_select([['Inches',"inches"], ['1/8 Inches',"eights_of_an_inch"], ['Centimeters',"centimeters"]]) %>
+                  <%= d.select :unit, options_for_select([['Inches',"inches"], ['1/8 Inches',"eights_of_an_inch"], ['Centimeters',"centimeters"]]), prompt: "Choose..." %>
                 </div>
                 <div class="form-group">
                   <%= d.label :image, "Depth Measurement Photo", class: 'flood-labels' %>
