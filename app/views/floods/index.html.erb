@@ -6,19 +6,19 @@
   <tr>
     <th>Date</th>
     <th>Description</th>
+    <th>Address</th>
     <th>Salinity</th>
-    <th>Water Depth</th>
+    <th>Depth</th>
   </tr>
   </thead>
   <tbody>
   <tr>
     <% @flood.each do |flood| %>
-        <th><%= flood.date_of_report %></th>
-        <th><%= flood.description %></th>
-        <th><%= flood.address %></th>
-        <th><%= flood.salinity.to_f %> <%= flood.salinity_units %> </th>
-        <th><%= flood.water_depth.to_f %> <%= flood.water_depth_units %></th>
-        <th><%= flood.document.inspect %></th>
+        <td><%= flood.date_of_report %></td>
+        <td><%= flood.description %></td>
+        <td><%= flood.address %></td>
+        <td><%= flood.salinity.level %> <%= image_tag flood.salinity.image.url %> </td>
+        <td><%= flood.depth.level %> <%= flood.depth.unit %></th>
         </tr>
     <% end %>
     </tbody>
