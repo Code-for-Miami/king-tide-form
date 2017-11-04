@@ -74,8 +74,12 @@
             <div class="form-group">
               <div class="form-inline">
                 <div class="form-group" data-content="You can use a refractometer to measure salinity in flood waters. <a href='/pages/instructions' title='Instructions'>More info</a>" data-toggle="popover" data-placement="right" data-html="true" title="Salinity">
-                  <%# f.label :salinity, nil, class: 'flood-labels' %>
-                  <%# f.number_field :salinity, placeholder: 'ppt (0/00) (parts per trillion)', class: "salinity-input form-control" %>
+                  <%= f.fields_for :salinity do |s| %>
+                  <%= s.label :salinity, nil, class: 'flood-labels' %>
+                  <%= s.number_field :level, placeholder: 'ppt (0/00) (parts per trillion)', class: "salinity-input form-control" %>
+                  <%= s.label :image, "Salinity Measurement Photo", class: 'flood-labels' %>
+                  <%= s.file_field :image, as: :file %>
+                  <% end %>
                 </div>
               </div>
             </div>
@@ -84,15 +88,21 @@
           <div class="col-sm-4">
             <div class="form-group">
               <div class="form-inline">
-                <div class="form-group" data-content="The local sea level can increase for a variety of reasons, for example, if the water is unusually warm, it increases the water depth through thermal expansion. Sea level can also rise during persistent low pressure in the atmosphere, which draws the water’s surface upward. (Source: <a href='https://weather.com/news/news/miami-beach-flooding-high-king-tide'>https://weather.com/news/news/miami-beach-flooding-high-king-tide</a>)" data-toggle="popover" data-placement="bottom" data-html="true" title="Water Depth">
-                  <%# f.label :water_depth, nil, class: 'flood-labels' %>
-                  <%# f.number_field :water_depth, class: "form-control" %>
-                </div>
 
-                <div class="form-group">
-                  <%# f.label :water_depth_units, "Units", class: 'flood-labels' %>
-                  <%# f.select :water_depth_units, options_for_select(["inches", "centimeters", "1/8 inches"]), {}, class: "form-control" %>
+                <%= f.fields_for :depth do |d| %>
+                <div class="form-group" data-content="The local sea level can increase for a variety of reasons, for example, if the water is unusually warm, it increases the water depth through thermal expansion. Sea level can also rise during persistent low pressure in the atmosphere, which draws the water’s surface upward. (Source: <a href='https://weather.com/news/news/miami-beach-flooding-high-king-tide'>https://weather.com/news/news/miami-beach-flooding-high-king-tide</a>)" data-toggle="popover" data-placement="bottom" data-html="true" title="Water Depth">
+                  <%= d.label :level, "Water Depth", class: 'flood-labels' %>
+                  <%= d.number_field :level, class: "form-control" %>
                 </div>
+                <div class="form-group">
+                  <%= d.label :unit, "Depth Units", class: 'flood-labels' %>
+                  <%= d.select :unit, options_for_select([['Inches',"inches"], ['1/8 Inches',"eights_of_an_inch"], ['Centimeters',"centimeters"]]) %>
+                </div>
+                <div class="form-group">
+                  <%= d.label :image, "Depth Measurement Photo", class: 'flood-labels' %>
+                  <%= d.file_field :image, as: :file %>
+                </div>
+                  <% end %>
               </div>
             </div>
           </div>

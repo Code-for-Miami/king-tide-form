@@ -13,6 +13,8 @@ class FloodsController < ApplicationController
   def new
     @flood = Flood.new
     @flood.attachments.build
+    @flood.build_salinity
+    @flood.build_depth
   end
 
   def create
@@ -49,6 +51,15 @@ class FloodsController < ApplicationController
       attachments_attributes: [
         :upload,
         :attachment
+      ],
+      salinity_attributes: [
+        :level,
+        :image
+      ],
+      depth_attributes: [
+        :level,
+        :unit,
+        :image
       ]
     )
   end
