@@ -16,6 +16,7 @@
 *= stub willitflood
 
 *= require_self
+*= require floods
 *= require bootstrap-cerulean.min
 *= require bootstrap/bootstrap-rails-tooltip
 *= require bootstrap/bootstrap-rails-popover
@@ -41,6 +42,7 @@ $brand-primary: #2FA4E7;
 
 footer {
   margin-top: 20px;
+  text-align: center;        
 }
 
 .col-xs-12.col-md-12 {

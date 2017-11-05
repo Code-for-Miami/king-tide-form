@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  root 'floods#new'
+  root 'floods#index'
+
+  get 'pages/willitflood'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
 

@@ -18,7 +18,26 @@ input.salinity-input {
   display: block;
 }
 
+.navbar{
+  margin-bottom: 0px !important;
+}
 .add-image {
   float: right;
   margin-top: 20px;
+}
+
+.btn-primary.home-buttons {
+  padding: 10px;
+  margin: 0 15px 15px 0;
+  font-size: 18px;
+  width: 250px;
+  display: inline-block;
+}
+
+h1, p {
+  text-align: center;
+}
+.btn-div{
+  padding: 7em 0em 7em 0em;
+  text-align: center;
 }
