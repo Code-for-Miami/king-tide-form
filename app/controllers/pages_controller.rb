@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   include HighVoltage::StaticPage
-  layout 'application'
+  layout 'applicationWillItFlood'
 
   def willitflood
     
@@ -9,12 +9,12 @@ class PagesController < ApplicationController
 
   private
 
-  # def layout_for_page
-  #   id = params[:id]
+  def layout_for_page
+    id = params[:id]
 
-  #   return :home if id === 'home'
-  #   return false if id === 'willitflood'
+    return :home if id === 'home'
+    return false if id === 'willitflood'
 
-  #   :application
-  # end
+    :application
+  end
 end

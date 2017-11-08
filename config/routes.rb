@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'floods#index'
 
-  get 'pages/willitflood'
+
 
   devise_for :admin_users, ActiveAdmin::Devise.config
 
@@ -13,9 +13,11 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :pages
+  
   # Wild Card Catch-all for High Voltage
-  get "/pages/*id" => 'pages#show', as: :page, format: false
+  # get "/pages/*id" => 'pages#show', as: :page, format: false
 
-  get 'willitflood' => 'pages#show', id: 'willitflood'
+  # get 'willitflood' => 'pages#show', id: 'willitflood'
 
 end

@@ -202,7 +202,7 @@ function loadStations() {
       window.lats = JSON.parse(this.response);
     }
   };
-  xmlhttp.open("GET", "willitflood/tides/stations.json", true);
+  xmlhttp.open("GET", "../willitflood/tides/stations.json", true);
   xmlhttp.send();
 }
 

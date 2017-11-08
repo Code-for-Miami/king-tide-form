@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= yield :title %> | King Tide</title>
+
+  <%= javascript_include_tag "//maps.googleapis.com/maps/api/js?libraries=places&key=#{ENV['google_maps_key']}&callback=initMap",
+                             'defer'=>true %>
+  <%= javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js",
+                             'defer'=>true %>
+
+  <%= csrf_meta_tags %>
+  <%= analytics_init if Rails.env.production? or Rails.env.development? %>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+</head>
+<body>
+
+<% unless action_name === "index" %>
+<%= render partial: "elements/navbar" %>
+<% end %>
+
+<%= bootstrap_flash %>
+
+<div class="container">
+<!--before yield-->
+  <%= yield %>
+  <!--after yield-->
+</div>
+
+<footer>
+  Open Data Day &copy; 2017
+</footer>
+
+</body>
+</html>

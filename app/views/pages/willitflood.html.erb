@@ -1,4 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Will It Flood? | King Tide</title>
 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <script type="text/javascript" src="../willitflood/js/calendar.js"></script>
+  <script type="text/javascript" src="../willitflood/js/main.js"></script>
+</head>
+<body>
 <div id="floating-label" class="floating-label hidden"></div>
 <main>
   <header>
@@ -34,10 +46,10 @@
   <div class="container">
       <div>
         <p hidden id="leyend" class="leyendText" > Risk Level  &nbsp &nbsp
-        <span class="square"></span> Tides < 3.0 ft &nbsp &nbsp  
-        <span class="square low"></span> Tides > 3.0 ft &nbsp &nbsp 
-        <span class="square med"></span> Tides < 8.0 ft &nbsp &nbsp
-        <span class="square high"></span> Tides >= 8.0 ft  
+        <span class="square"></span> Tides < 2.5 ft &nbsp &nbsp  
+        <span class="square low"></span> Tides >= 2.5 ft 1x per day &nbsp &nbsp 
+        <span class="square med"></span> Tides >= 2.5 ft 2x per day &nbsp &nbsp
+        <span class="square high"></span> Highest Monthly Tide  
         </p>
       </div>
     <h2 id="station"></h2>
@@ -49,11 +61,12 @@
   <footer>
     <div class="container">
       <div style="display: flex;align-items: center;justify-content: center;">
-        <img src="willitflood/images/carta.png" width="112" height="100" alt="CARTA-FIU" />
-        <img src="willitflood/images/cfm.png" width="160" height="100" alt="CODE FOR MIAMI" />
+        <img src="../willitflood/images/carta.png" width="112" height="100" alt="CARTA-FIU" />
+        <img src="../willitflood/images/cfm.png" width="160" height="100" alt="CODE FOR MIAMI" />
       </div>
     </div>
   </footer>
   <p id="tooltip" class="tooltip hidden"></p>
 </main>
-
+</body>
+</html>
