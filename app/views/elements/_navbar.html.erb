@@ -1,15 +1,20 @@
-<nav class="square navbar navbar-default" role="navigation">
+<nav class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
-  <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <%= link_to "Sea Level Rise", root_path, class: "navbar navbar-brand" %>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sea-level-menu" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to "Sea Level Rise", root_path, class: 'navbar-brand' %>
     </div>
-    <div>    
+
+    <div class="collapse navbar-collapse" id="sea-level-menu">
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Document Flood", {:action => 'new'} %></li>
-        <li><%= link_to "Will It Flood", page_path('willitflood') %></li>
+        <li><%= link_to "Document Flood", new_flood_path %></li>
+        <li><%= link_to "Will It Flood", willitflood_path %></li>
       </ul>
     </div>
-</div>
-  <!-- Collect the nav links, forms, and other content for toggling -->
+  </div>
 </nav>
