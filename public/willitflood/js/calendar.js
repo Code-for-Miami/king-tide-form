@@ -196,12 +196,14 @@ function renderMonth(monthData) {
           dayElement.classList.toggle("month-day");
           dayElement.textContent = day.date;
           if(day.inMonth) {
-            dayElement.dataset.label = day.tideData.label;
-            if (day.tideData.highestInMonth) {
-              dayElement.classList.toggle("highest-in-month");
-            }
-            switch(day.tideData.floodLevel) {
-              case 0:
+              dayElement.onmouseenter = showLabel;
+              dayElement.onmouseleave = hideLabel;
+              dayElement.dataset.label = day.tideData.label;
+              if (day.tideData.highestInMonth) {
+                  dayElement.classList.toggle("highest-in-month");
+                }
+                switch(day.tideData.floodLevel) {
+                    case 0:
                 dayElement.classList.toggle("no-tides");
                 break;
               case 1:
@@ -216,8 +218,6 @@ function renderMonth(monthData) {
           } else {
             dayElement.classList.toggle("non-month");
           }
-          dayElement.onmouseenter = showLabel;
-          dayElement.onmouseleave = hideLabel;
           weekElement.appendChild(dayElement);
         });
         monthElement.appendChild(weekElement);
@@ -241,13 +241,4 @@ function showLabel(event) {
 function hideLabel(event) {
   var label = document.getElementById("floating-label");
   label.classList.add("hidden");
-}
-
-function linkToForm(event) {
-    var monthDayButton = document.getElementById("month-day");
-    var day = event.target;
-    var mousex = event.pageX + 20; //Get X coordinates
-    var mousey = event.pageY + 10; //Get Y coordinates
-           
-    monthDayButton.onclick.location.href='../floods/index';
 }
