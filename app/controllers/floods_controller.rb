@@ -15,6 +15,9 @@ class FloodsController < ApplicationController
     @flood.attachments.build
     @flood.build_salinity
     @flood.build_depth
+    @flood.build_water_sample
+    @flood.build_close_up
+    @flood.build_long_shot
   end
 
   def create

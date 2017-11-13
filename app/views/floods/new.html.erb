@@ -69,10 +69,9 @@
           </div>
         </div>
 
+           
         <div class="row">
-          <div class="col-sm-3">
-            <div class="form-group">
-              <div class="form-inline">
+          <div class="col-sm-4">
                 <div class="form-group" data-content="You can use a refractometer to measure salinity in flood waters. <a href='/pages/instructions' title='Instructions'>More info</a>" data-toggle="popover" data-placement="right" data-html="true" title="Salinity">
                   <%= f.fields_for :salinity do |s| %>
                   <%= s.label :salinity, nil, class: 'flood-labels' %>
@@ -81,14 +80,10 @@
                   <%= s.file_field :image, as: :file %>
                   <% end %>
                 </div>
-              </div>
-            </div>
+
           </div>
 
           <div class="col-sm-4">
-            <div class="form-group">
-              <div class="form-inline">
-
                 <%= f.fields_for :depth do |d| %>
                 <div class="form-group" data-content="The local sea level can increase for a variety of reasons, for example, if the water is unusually warm, it increases the water depth through thermal expansion. Sea level can also rise during persistent low pressure in the atmosphere, which draws the water’s surface upward. (Source: <a href='https://weather.com/news/news/miami-beach-flooding-high-king-tide'>https://weather.com/news/news/miami-beach-flooding-high-king-tide</a>)" data-toggle="popover" data-placement="bottom" data-html="true" title="Water Depth">
                   <%= d.label :level, "Water Depth", class: 'flood-labels' %>
@@ -103,24 +98,53 @@
                   <%= d.file_field :image, as: :file %>
                 </div>
                   <% end %>
-              </div>
-            </div>
           </div>
 
+             <div class="col-sm-4">
+                <div class="form-group" data-content="You can use a refractometer to measure salinity in flood waters. <a href='/pages/instructions' title='Instructions'>More info</a>" data-toggle="popover" data-placement="right" data-html="true" title="Salinity">
+                  <%= f.fields_for :water_sample do |ws| %>
+                  <%= ws.label :bottle_number, nil, class: 'flood-labels' %>
+                  <%= ws.number_field :bottle_number, placeholder: 'Bottle Number', class: "form-control" %>
+                  <%= ws.label :image, "Water Sample Photo", class: 'flood-labels' %>
+                  <%= ws.file_field :image, as: :file %>
+                  <% end %>
+                </div>
+          </div>
+
+        </div>
+        
+        <div class="row">
+          
+          <div class="col-sm-3 file-upload-div" >
+              <%= f.fields_for :close_up do |cu| %>
+                  <%= cu.label :upload, "Upload Close-Up Image", class: 'flood-label' %>
+                  <%= cu.file_field :upload, as: :file %>
+              <% end %>
+          </div>
+
+            <div class="col-sm-3 file-upload-div" >
+              <%= f.fields_for :long_shot do |ls| %>
+                  <%= ls.label :upload, "Long-Shot Image", class: 'flood-label' %>
+                  <%= ls.file_field :upload, as: :file %>
+              <% end %>
+          </div>
+          
           <div class="col-sm-3 file-upload-div" id="fileFields">
-            <%= f.fields_for :attachments do |af| %>
-                <%= af.label :upload, "Upload Images and Videos", class: 'flood-label' %>
-                <%= af.file_field :upload, as: :file, class: "duplicateable-file-field" %>
-            <% end %>
+              <%= f.fields_for :attachments do |af| %>
+                  <%= af.label :upload, "Upload Images and Videos", class: 'flood-label' %>
+                  <%= af.file_field :upload, as: :file, class: "duplicateable-file-field" %>
+              <% end %>
           </div>
 
-          <div class="col-sm-2">
+          <div class="col-sm-3">
             <button type="button" id="fileAdd" class="btn btn-info">
               <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
               Add another Image or Video
             </button>
+            </div>
           </div>
-        </div>
+
+
 
         <hr/>
         <%= f.submit "Submit Report", class: "btn btn-success btn-block", data: { confirm: 'Thanks for your submission!' } %>
