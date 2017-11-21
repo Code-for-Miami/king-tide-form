@@ -10,7 +10,7 @@
   <%= csrf_meta_tags %>
   <%= analytics_init if Rails.env.production? or Rails.env.development? %>
 
-  <%= stylesheet_link_tag 'willitflood.css', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'floods.css', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css', media: 'all'%>
 
   <%= javascript_include_tag "//maps.googleapis.com/maps/api/js?libraries=places&key=#{ENV['google_maps_key']}&callback=initMap",
@@ -30,10 +30,10 @@
   <header>
     <div class="container">
       <h1>Will it Flood?</h1>
-      <h4>
+      <p>
         Enter your address in the map. A calendar of high tides for the nearest NOAA tide monitoring station will appear. Dates
         in blue are at highest risk. Click or roll over to see time & depth.
-      </h4>
+      </p>
       <form action="">
         <label>Highlight tides greater than </label>
         <select id="kingme" name="kingchooser">

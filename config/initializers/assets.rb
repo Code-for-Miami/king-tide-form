@@ -5,4 +5,4 @@ Rails.application.config.assets.version = '1.0'
 
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
-Rails.application.config.assets.precompile += %w( willitflood.css bootstrap.min.js )
+Rails.application.config.assets.precompile += %w( floods.css bootstrap.min.js )
