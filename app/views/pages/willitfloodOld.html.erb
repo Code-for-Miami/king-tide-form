@@ -1,4 +1,29 @@
-<%= content_for :title, 'Sea Level Rise' %>
+<!doctype html>
+<html lang="en">
+<head>
+  <title>new title</title>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <%= csrf_meta_tags %>
+  <%= analytics_init if Rails.env.production? or Rails.env.development? %>
+
+  <%= stylesheet_link_tag 'application.css', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css', media: 'all'%>
+
+  <%= javascript_include_tag "//maps.googleapis.com/maps/api/js?libraries=places&key=#{ENV['google_maps_key']}&callback=initMap",
+                             'defer'=> true %>
+  <%= javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js",
+                             'defer'=>true %>
+
+  <script type="text/javascript" src="willitflood/js/calendar.js"></script>
+  <script type="text/javascript" src="willitflood/js/main.js"></script>
+</head>
+<body>
+
+<%= render partial: 'elements/navbar' %>
 
 <div id="floating-label" class="floating-label hidden"></div>
 <main>
@@ -31,7 +56,6 @@
     </div>
   </header>
   <input id="pac-input" class="controls" placeholder="Enter your address">
-
   <div id="map"></div>
   <div class="container">
     <div>
@@ -48,8 +72,17 @@
 
     </div>
   </div>
-
+  <footer>
+    <div class="container">
+      <div style="display: flex;align-items: center;justify-content: center;">
+        <img src="willitflood/images/carta.png" width="112" height="100" alt="CARTA-FIU" />
+        <img src="willitflood/images/cfm.png" width="160" height="100" alt="CODE FOR MIAMI" />
+      </div>
+    </div>
+  </footer>
   <p id="tooltip" class="tooltip hidden"></p>
 </main>
 
-
+<%= javascript_include_tag 'application' %>
+</body>
+</html>

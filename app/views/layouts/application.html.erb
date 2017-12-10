@@ -3,13 +3,19 @@
 <head>
   <title><%= yield :title %> | King Tide</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css', media: 'all'%>
+  
   <%= javascript_include_tag "//maps.googleapis.com/maps/api/js?libraries=places&key=#{ENV['google_maps_key']}", 'defer' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <script src="https://code.jquery.com/jquery-migrate-3.0.0.js"></script>
 
+  <%= javascript_include_tag 'calendar' %>
+  <%= javascript_include_tag 'main' %>
+
   <%= csrf_meta_tags %>
   <%= analytics_init if Rails.env.production? or Rails.env.development? %>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
 </head>
 <body>
 
@@ -20,12 +26,20 @@
 <%= bootstrap_flash %>
 
 <div class="container">
-<!--before yield-->
+
   <%= yield %>
-  <!--after yield-->
+
 </div>
 
 <footer>
+  </br>
+    <div class="container">
+      <div style="display: flex;align-items: center;justify-content: center;">
+        <%= image_tag("carta.png", :alt => "CARTA-FIU", :style => 'width: 112; height: 100')%>
+        <%= image_tag("cfm.png", :alt => "CODE FOR MIAMI", :style => 'width: 160; height: 100')%>
+      </div>
+    </div>
+    </br>
   Open Data Day &copy; 2017
 </footer>
 
