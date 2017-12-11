@@ -2,6 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.background { 
+  background-image: url('ocean.jpg');
+  background-repeat: no-repeat;
+  background-position: center top; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 #mapwrap {
   position: relative;
 }
@@ -20,6 +30,7 @@ input.salinity-input {
 
 .navbar{
   margin-bottom: 0px !important;
+  border-radius: 0px !important; 
 }
 .add-image {
   float: right;
@@ -38,9 +49,42 @@ h1, p {
   text-align: center;
 }
 
+.text-white {
+  color: white;
+  font-size: 12px;
+}
+
+.div-index {
+  color: white;
+  padding-top: 100px;
+  height: 300px;
+}
+
 .btn-div{
   padding: 7em 0em 7em 0em;
   text-align: center;
+}
+
+#wrapper {
+  min-height: 100%;
+  position:relative;
+}
+
+#main {
+  padding:10px;
+  padding-bottom: 180px;
+  /* must be same height as the footer */
+}
+
+#footer {
+  position: relative;
+  margin-top: -180px;
+  /* negative value of footer height */
+  height: 180px;
+  clear: both;
+  background-color: rgba(255,255,255,0.9);
+  color: #626567;
+  font-size: 12px;
 }
 
 // will it flood styles
