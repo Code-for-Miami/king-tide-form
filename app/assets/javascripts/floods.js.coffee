@@ -2,9 +2,10 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-$(document).ready ->
+$(document).on "turbolinks:load", ->
   navigator.geolocation.getCurrentPosition( initGoogleMaps )
 
+$(document).on "turbolinks:load", ->
 initGoogleMaps = (position) ->
   map = $ "#gmap"
   location_field = $ "#flood_location"
