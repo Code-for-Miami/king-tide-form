@@ -75,6 +75,8 @@ GEM
     bootstrap-sass-extras (0.0.7)
       rails (>= 3.1.0)
     builder (3.2.3)
+    bulk_insert (1.6.0)
+      activerecord (>= 4.1.0)
     climate_control (0.2.0)
     cocaine (0.5.8)
       climate_control (>= 0.0.3, < 1.0)
@@ -271,6 +273,7 @@ DEPENDENCIES
   bootstrap-popover-rails
   bootstrap-sass (= 3.3.5)
   bootstrap-sass-extras
+  bulk_insert
   bundler
   coffee-rails (~> 4.0.0)
   debug-extras

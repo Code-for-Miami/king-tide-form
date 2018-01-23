@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :tide_predictions, only: ['index']
+
   root 'floods#new'
 
   devise_for :admin_users, ActiveAdmin::Devise.config

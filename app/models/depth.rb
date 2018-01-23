@@ -7,5 +7,5 @@ class Depth < ActiveRecord::Base
   }
   has_attached_file :image
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
-  validates :level, :unit, :image, presence: true
+  validates :unit, :image, presence: true, if: lambda{ |model| model.level.present? }
 end

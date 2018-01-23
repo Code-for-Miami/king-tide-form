@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  station: 1
+  date: 2017-12-11
+  time: 2017-12-11 21:28:48
+  depth: 1.5
+  highlow: 
+
+two:
+  station: 1
+  date: 2017-12-11
+  time: 2017-12-11 21:28:48
+  depth: 1.5
+  highlow: 

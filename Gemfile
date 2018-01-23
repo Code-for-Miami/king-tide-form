@@ -37,6 +37,8 @@ gem 'aws-sdk', '~> 2.3'
 gem 'high_voltage', '~> 3.0.0'
 gem 'figaro'
 
+gem 'bulk_insert' #for seeding the DB
+
 ## Environment Specific
 
 group :production do
