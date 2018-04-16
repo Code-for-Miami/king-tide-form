@@ -1,3 +1,7 @@
+# THIS REPO IS NOW DEPRECATED
+
+Refer to https://github.com/Code-For-Miami/queen-tide instead.
+
 # Will It Flood App & King Tide Form Combined ReadMes
 _These projects were combined. Top part is for Will It Flood, scroll down for King Tide Form_
 
